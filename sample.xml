@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<tests>
+	
+	<!-- PING -->
+	<test type="ping" host="localhost"></test>
+	<test type="ping" host="www.slashdot.org"></test>
+	<test type="ping" host="this.host.does.not.exist"></test>
+
+	<!-- DNS -->
+	<test type="dns" host="www.microsoft.com"></test>
+	<test type="dns" host="this.host.does.not.exist"></test>
+
+	<!-- HTTP-GET -->
+	<test type="http-get" url="http://www.microsoft.com"></test>
+	<test type="http-get" url="http://www.this.host.does.not.exist"></test>
+
+	<!-- TCP -->
+	<test type="tcp" host="www.microsoft.com" port="443"></test>
+	<test type="tcp" host="this.host.does.not.exist" port="80"></test>
+	
+	<!-- FILESHARES -->
+	<test type="fileshare" path="\\live.sysinternals.com\tools"></test>
+	<test type="fileshare" path="\\NOSERVER\NoShare\NoFolder"></test>
+	
+	<!-- SQL SERVER -->
+	<test type="sqlserver" connectionstring="Server=SQLSERVER;Database=master;Trusted_Connection=True;"></test>
+	<test type="sqlserver" connectionstring="Server=NOSERVER;Database=NoDatabase;Trusted_Connection=True;"></test>
+
+</tests>
